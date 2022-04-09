@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+        <script defer src="../public/js/index.js"></script>
+        <title>Portfolio website</title>
+    </head>
+    <body>
+        <header>
+            <img src="../public/images/catGuts.jpg" class="logo" alt="logo">
+            <button class="nav-toggle" aria-label="toggle naviigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href = "#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href = "#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href = "#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href = "#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Gabriel Gonzalez</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro"> web dev</p>
+            <img src="../public/images/Me.jpg" class="intro__img" alt="A picture of me">
+        </section>
+
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What I do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>HTML</h3>
+                    <p>Your portfolio is the first thing potential employers will look at when considering you for a junior web developer job, so your site 
+                        needs to be a real reflection of your skills and personal brand</p>
+                </div>
+
+                <div class="service">
+                    <h3>Javascript</h3>
+                    <p>But, before you can load up your portfolio, you need to
+                    code it (you can make a website using HTML5, CSS, and JavaScript), 
+                    launch it, and make sure it stands out from other websites.</p>
+                </div>
+
+                <div class="service">
+                    <h3>MySQL</h3>
+                    <p>Once you’ve got your portfolio site built, it’s time to load it up 
+                    with some core portfolio projects for tech beginners. </p>
+                </div>
+            </div>
+            <a ref="#work" class="btn">My Work</a>
+        </section>
+
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Who Am I?</h2>
+            <p class="section__subtitle section__subtitle--about">Hello I am an inspiring web developer from SFSU</p>
+
+            <div class="about--me__body">
+                <p></p>
+                <p></p>
+            </div>
+
+            <img src="../public/images/sadGuts.png" alt="Another picture of me" class="about-me__img">
+        </section>
+
+        <section class="my-work" id="work">
+            <h2 class="section__title">My Work</h2>
+            <p class="section__subtitle">These are all the projects that I have worked on</p>
+
+            <div class="portfolio">
+                <a ref="#" class="portfolio__item"></a>
+                <!-- This is where I include images of my previous works and links and their corresponding videos-->
+            </div>
+        </section>
+
+        <footer>
+            <a ref="ggonzalez2@mail.sfsu.edu" class="footer__link">ggonzalez2@mail.sfsu.edu</a>
+        </footer>
+    </body>
+</html>
+

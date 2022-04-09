@@ -1,0 +1,262 @@
+body{
+    background: fixed;
+    margin: 0;
+    line-height: 1.0;
+}
+
+section{
+    padding: 5em 2em;
+}
+
+img{
+    display: black;
+    max-width: 200px;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 1.5em;
+    font-size: .8rem;
+    text-transform: uppercase;
+    background-color: cornflowerblue;
+    transition:200ms ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+.section__title {
+margin-bottom: .25em;
+}
+.section__title--intro{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+}
+
+.section__subtitle--intro,
+.section__subtitle--about{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo{
+    max-width: 150px;
+}
+.nav{
+    position: fixed;
+    background-color:rgb(50, 50, 50);
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transform: translate(100%);
+    transition: 200ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link{
+    color: inherit;
+    font-weight: bold;
+    font-size: large;
+}
+
+.nav__link:hover{
+    border: solid white;
+    border-radius: 10px;
+}
+
+.nav-toggle{
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open {
+    background-color: red;
+}
+
+.hamburger{
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    background: rgb(50, 50, 50);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after{
+    content: '';
+    position:absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before{top: 6px;}
+.hamburger::after{bottom:6px;}
+
+.intro{
+    position: relative;
+} 
+
+@media (min-width: 600px){
+    .intro{
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+        "img title"
+        "img subtitle";
+        grid-auto-columns: min-content max-content;
+    }
+
+    .intro__img{
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section__subtitle--intro{
+        align-self: start;
+        grid-column: -1/1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+    }
+}
+
+.my-services{
+    background-image: url("../images/blue.webp");
+    background-size: cover;
+    text-align: center;
+}
+
+.section__title--services{
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 5em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: black;
+    opacity: .5;
+}
+
+.services{
+    margin-bottom: 4em;
+}
+
+.service {
+    width: 350px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px){
+    .services{
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .service + .service {
+       margin-left: 2em; 
+    }
+
+}
+
+.about-me {
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.about-me__img{
+    box-shadow: black;
+}
+
+@media (min-width: 680px){
+    .about-me{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+        "title img"
+        "subtitle img"
+        "text img";
+        grid-column-gap: 2em;
+    }
+
+    .section__title--about{
+        grid-area: title;
+    }
+
+    .section__subtitle--about{
+        grid-column: 1/-1;
+        grid-row: 2;
+        position: relative;
+    }
+
+    .section__subtitle--word{
+        font: bold;
+        margin-bottom: 1em;
+    }
+
+    .about-me__img{
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.my-work{
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
